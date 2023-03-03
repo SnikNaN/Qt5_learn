@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="stone.jpg">stone.jpg</file>
+        <file>clock.png</file>
+        <file>img.jpg</file>
+    </qresource>
+</RCC>
