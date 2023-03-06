@@ -1,16 +1,9 @@
 // ======================================================================
-//  main.cpp
-// ======================================================================
-//                   This file is a part of the book 
-//             "Qt 5.10 Professional programming with C++"
-//                       http://qt-book.com
-// ======================================================================
-//  Copyright (c) 2017 by Max Schlee
+// Digital clock with different colour schemes
 // ======================================================================
 
 #include <QApplication>
 #include "Buttons.h"
-#include "Clock.hpp"
 
 // ----------------------------------------------------------------------
 int main (int argc, char** argv)
