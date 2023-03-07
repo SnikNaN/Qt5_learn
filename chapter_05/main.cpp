@@ -60,32 +60,24 @@ int main(int argc, char** argv)
     QPalette pal1;
     pal1.setColor(pwgt1.backgroundRole(), Qt::blue);
     pwgt1.setPalette(pal1);
-    pwgt1.resize(100, 100);
-    pwgt1.move(500, 500);
     pwgt1.setAutoFillBackground(true);
 
     QWidget pwgt2;
     QPalette pal2;
     pal2.setBrush(pwgt2.backgroundRole(), QBrush(QPixmap(":/stone.jpg")));
     pwgt2.setPalette(pal2);
-    pwgt2.resize(400, 400);
-    pwgt2.move(75, 75);
     pwgt2.setAutoFillBackground(true);
 
     QWidget pwgt3;
     QPalette pal3;
     pal3.setColor(pwgt3.backgroundRole(), Qt::red);
     pwgt3.setPalette(pal3);
-    pwgt3.resize(100, 100);
-    pwgt3.move(500, 500);
     pwgt3.setAutoFillBackground(true);
 
     QWidget pwgt4;
     QPalette pal4;
     pal4.setColor(pwgt4.backgroundRole(), Qt::green);
     pwgt4.setPalette(pal4);
-    pwgt4.resize(100, 100);
-    pwgt4.move(500, 500);
     pwgt4.setAutoFillBackground(true);
 
     st->add(&pwgt1);
