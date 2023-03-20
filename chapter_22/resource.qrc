@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>anim.mng</file>
+    </qresource>
+</RCC>
