@@ -22,7 +22,6 @@ int main(int argc, char** argv)
     anim1->setKeyValueAt(0.75f, 150);
     anim1->setEndValue(100);
     anim1->setDuration(12000);
-    anim1->setLoopCount(-1);
 
     QPropertyAnimation* anim2 = new QPropertyAnimation(&lbl, "geometry", &lbl);
     anim2->setStartValue(QRect(0, 0, 128, 128));
@@ -33,17 +32,13 @@ int main(int argc, char** argv)
     anim2->setKeyValueAt(0.75f, QRect(200, 500, 128, 128));
     anim2->setEndValue(QRect(0, 0, 128, 128));
     anim2->setDuration(15000);
-    anim2->setLoopCount(-1);
     anim2->setEasingCurve(QEasingCurve::InOutBounce);
 
-//    QParallelAnimationGroup* agroup = new QParallelAnimationGroup(&lbl);
-//    agroup->addAnimation(anim1);
-//    agroup->addAnimation(anim2);
-
-//    agroup->start();
-    anim1->start();
-    anim2->start();
-
+    QParallelAnimationGroup* agroup = new QParallelAnimationGroup(&lbl);
+    agroup->addAnimation(anim1);
+    agroup->addAnimation(anim2);
+    agroup->setLoopCount(-1);
+    agroup->start();
 
     lbl.show();
 
