@@ -15,7 +15,7 @@ int main(int argc, char** argv)
 
     lbl.setMovie(mov);
 
-    QPropertyAnimation* anim1 = new QPropertyAnimation(mov, "speed");
+    QPropertyAnimation* anim1 = new QPropertyAnimation(mov, "speed", &lbl);
     anim1->setStartValue(100);
     anim1->setKeyValueAt(0.25f, 200);
     anim1->setKeyValueAt(0.5f, 400);
@@ -24,7 +24,7 @@ int main(int argc, char** argv)
     anim1->setDuration(12000);
     anim1->setLoopCount(-1);
 
-    QPropertyAnimation* anim2 = new QPropertyAnimation(&lbl, "geometry");
+    QPropertyAnimation* anim2 = new QPropertyAnimation(&lbl, "geometry", &lbl);
     anim2->setStartValue(QRect(0, 0, 128, 128));
     anim2->setKeyValueAt(0.25f, QRect(800, 200, 128, 128));
     anim2->setKeyValueAt(0.5f, QRect(qApp->screens().at(0)->size().width() - 128,
@@ -36,11 +36,14 @@ int main(int argc, char** argv)
     anim2->setLoopCount(-1);
     anim2->setEasingCurve(QEasingCurve::InOutBounce);
 
-    QParallelAnimationGroup* agroup = new QParallelAnimationGroup(&lbl);
-    agroup->addAnimation(anim1);
-    agroup->addAnimation(anim2);
+//    QParallelAnimationGroup* agroup = new QParallelAnimationGroup(&lbl);
+//    agroup->addAnimation(anim1);
+//    agroup->addAnimation(anim2);
 
-    agroup->start();
+//    agroup->start();
+    anim1->start();
+    anim2->start();
+
 
     lbl.show();
 
