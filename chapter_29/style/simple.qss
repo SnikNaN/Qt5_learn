@@ -1,0 +1,10 @@
+/* Simple Style */
+QWidget {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:1 rgb(133,133,175),
+                                stop:0.4 rgb(31, 31, 44) );
+    color: #FFFFFF;
+    min-width: 100px;
+    min-height: 30px;
+    font: 15pt;
+}
